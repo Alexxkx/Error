@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1C1C1C;
+    color: #FFF;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-top: 15px;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 404 */
+
+.page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-image: url("./image/food_fon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1; 
+}
+
+.page .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 125px 15px;
+}
+
+.error {
+    font-size: 150px;
+}
+
+.page_text {
+    font-size: 30px;
+}
+
+.return {
+    font-size: 25px;
+    border: 3px solid #ffffff;
+    padding: 16px 46px;
+    margin-top: 50px;
+    display: inline-block;
+    transition: opacity 0.4s;
+}
+
+.return:hover {
+    background-color: #fff;
+    transition: background-color 0.6s;
+}
+
+.desc {
+    opacity: 1;
+    color: #fff;
+    transition: color 0.6s;
+}
+
+.return:hover .desc {
+    color: #1C1C1C;
+}
+
+.page_nav {
+    margin-top: 80px;
+}
+
+.page_nav a {
+    opacity: 0.7;
+    transition: opacity 0.4s;
+}
+
+.page_nav a:hover {
+    opacity: 1;
+}
+
+.nav_list {
+    font-size: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Адаптив */
+
+@media (max-width: 650px) {
+    .error {
+        font-size: 100px;
+    }
+
+    .page_text {
+        font-size: 20px;
+    }
+
+    .return {
+        font-size: 18px;
+        padding: 16px 40px;
+        margin-top: 30px;
+    }
+
+    .page_nav {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav_list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
